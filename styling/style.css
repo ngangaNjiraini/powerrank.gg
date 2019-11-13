@@ -63,6 +63,7 @@ ul {
   @media screen and (max-height: 300px) {
       ul {
           margin-top: 40px;
+          
       }
   }
 
@@ -73,12 +74,14 @@ ul {
 
 .navbar-custom {
     background-color: black;
+    text-align: center;
 }
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     font-family: linkFont;
     font-size: small;
+    
     color: rgba((255, 255, 255, 0.932)0.5);
 }
 
