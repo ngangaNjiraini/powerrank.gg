@@ -22,19 +22,25 @@ body, p {
     font-family: bodyFont;
 }
 
+h1 {
+    font-family: headerFont;
+}
+
 ul { 
     padding: 0; 
     list-style: none; 
     display: table;
     width: 600px;
     text-align: center;
-  }
-  li { 
+}
+
+li { 
     display: table-cell; 
     position: relative; 
     padding: 15px 0;
-  }
-  a {
+}
+
+a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
@@ -43,8 +49,9 @@ ul {
     display: inline-block;
     padding: 15px 20px;
     position: relative;
-  }
-  a:after {    
+}
+
+a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -127,6 +134,14 @@ background-position: 50% 50%;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url("../images/evo.jpg");
 }
 
+.profile-sec {
+    margin-top: 90px;
+    background-image: url("../images/smashposter.png"); /* fallback */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url("../images/smashposter.png");
+    -webkit-filter: blur(1.5px);
+    filter: blur(1.5px);
+    z-index:4;
+}
 /* Remove Bottom Margin from Jumbotron */
 .jumbotron{margin-bottom: 0;}
 
