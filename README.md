@@ -1,1 +1,1 @@
-# powerrank.gg
+# POWERRANK.gg
