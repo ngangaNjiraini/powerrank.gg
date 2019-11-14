@@ -63,7 +63,7 @@
     left: 50%;
     max-width: 100px;
     opacity: 1;
-    box-shadow: 3px 3px 20px rgba(15, 40, 107, 0.582);
+    box-shadow: 3px 3px 20px rgba(107, 15, 15, 0.582);
     border: 2px solid rgb(255, 255, 255);
     -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
