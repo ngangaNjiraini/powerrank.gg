@@ -17,15 +17,20 @@ const Region = sequelize.import('region-model');
 const Ranking = sequelize.import('ranking-model');
 
 // 1:1
-Ranking.belongsTo(Player);
-Player.hasOne(Ranking);
+Ranking.belongsTo(Player, { foreignKey: 'playerID'});
+Player.hasOne(Ranking, { foreignKey: 'playerID'});
 
 // 1:Many
-Player.belongsTo(Region);
-Region.hasMany(Player);
+Player.belongsTo(Region, { foreignKey: 'regionID'});
+Region.hasMany(Player, { foreignKey: 'regionID'});
 
 // Sync models and add default data
 sequelize.sync({ force: true }).then(() => {
+    Region.create({ name: 'North England'});
+    Region.create({ name: 'South England'});
+    Region.create({ name: 'Scotland'});
+    Region.create({ name: 'Wales'});
+    
     Player.create({ 
         playerTag: 'AimSuper',
         regionID: '3' ,
@@ -79,11 +84,6 @@ sequelize.sync({ force: true }).then(() => {
         Matches: 28,
         Avatar: "https://randomuser.me/api/portraits/men/67.jpg"
     });
-
-    Region.create({ name: 'North England'});
-    Region.create({ name: 'South England'});
-    Region.create({ name: 'Scotland'});
-    Region.create({ name: 'Wales'});
 
     Ranking.create({playerID: 6});
     Ranking.create({playerID: 5});

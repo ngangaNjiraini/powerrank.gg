@@ -6,13 +6,6 @@ module.exports = (sequelize, DataTypes) => {
         playerTag: {
             type: DataTypes.STRING
         },
-        regionID: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'region-model',
-              key: 'regionID',
-            }
-        },
         Wins: {
             type: DataTypes.INTEGER
         },
@@ -25,5 +18,5 @@ module.exports = (sequelize, DataTypes) => {
         Avatar: {
             type: DataTypes.STRING
         },
-    });
+    }, { timestamps: false});
 }

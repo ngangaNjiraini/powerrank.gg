@@ -1,10 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-
+const playerRouter = require('./routes/player-route');
+const rankingRouter = require('./routes/ranking-route');
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/players', playerRouter);
+app.use('/ranking', rankingRouter);
 
 app.use((err, req, res, next) => {
     res.status(500).send({
