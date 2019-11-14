@@ -48,43 +48,46 @@
 <body>
     <!-- Parallax Section -->
     <div class="jumbotron paral paralsec">
-        <h1 class="display-3">from local to international</h1>
-        <p class="lead">A Simple and Easy tool to manage player stats and rankings</p>
+        <h1 class="display-3">Welcome to the ultimate ranking tool</h1>
+        <p class="lead">Manage player stats and rankings quickly and easily</p>
         <p class="lead">
             <a class="btn btn-lg btn-md btn-outline-light" href="players.html">View Players</a>
-            <a class="btn btn-lg btn-md btn-outline-light" href="#">View Rankings</a>
+            <a class="btn btn-lg btn-md btn-outline-light" href="#rank-table">View Rankings</a>
         </p>
     </div>
 
-    
+
     <div class="card-deck">
         <div class="card border-light">
             <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
+                <img src="images/icons/users.png" class="card-img-top" style="width: 150px; height: 150px;">
+                <h5 class="card-title"><b>Player Profiles</b></h5>
+                <p class="card-text">Create profiles for your friends or your teams<br>Show off you Best Wins (or you
+                    Worst loses)!</p>
             </div>
         </div>
 
         <div class="card border-light">
             <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
+                <img src="images/icons/heart.png" class="card-img-top" style="width: 150px; height: 150px;">
+                <h5 class="card-title"><b>Wanna be the best?</b></h5>
+                <p class="card-text">Get out there and prove it!</p>
             </div>
         </div>
 
         <div class="card border-light">
             <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
+                <img src="images/icons/list.png" class="card-img-top" style="width: 150px; height: 150px;">
+                <h5 class="card-title"><b>Rank lists</b></h5>
+                <p class="card-text">Compare with other players and see how <br> you stack up with against best of the best!</p>
             </div>
         </div>
     </div>
-    
-    <div class="table-background">
-        <h1>Rankings</h1>
+
+
+
+    <div class="table-background" id="rank-table">
+        <h1>Overall Rankings</h1>
         <div class="tbl-header">
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
@@ -94,21 +97,19 @@
                         <th>Wins</th>
                         <th>Loses</th>
                         <th>Matches</th>
-                        <th>W-L%</th>
                     </tr>
                 </thead>
             </table>
         </div>
         <div class="tbl-content">
             <table cellpadding="0" cellspacing="0" border="0">
-                <tbody>
+                <tbody id="rank-table">
                     <tr>
                         <td><b>1</b></td>
                         <td>FrinkZz</td>
                         <td>30</td>
                         <td>0</td>
                         <td>30</td>
-                        <td>100</td>
                     </tr>
                 </tbody>
             </table>
