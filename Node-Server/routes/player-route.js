@@ -13,4 +13,16 @@ router.get('/all', async (_req, res) => {
     res.send(result);
 });
 
+router.get('/:index', async (req, res) => {
+    const [first = null] = await models.Player.findAll({
+        where: { playerID: req.params.index },
+        include: [{ model: models.Region }]
+    });
+    if (first) {
+        res.send(first);
+    } else {
+        res.status(404).send({ message: 'Item not found for index ' + req.params.index });
+    }
+});
+
 module.exports = router;

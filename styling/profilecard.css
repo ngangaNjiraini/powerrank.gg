@@ -31,8 +31,8 @@
     opacity: 0.9;
     -webkit-filter: blur(0.5px);
     filter: blur(0.5px);
-     -webkit-transform: scale(1.8);
-    transform: scale(2);
+     -webkit-transform: scale(1);
+    transform: scale(1);
   }
   .profile-card-3 .card-content {
     width: 100%;
@@ -63,7 +63,7 @@
     left: 50%;
     max-width: 100px;
     opacity: 1;
-    box-shadow: 3px 3px 20px rgba(107, 15, 15, 0.582);
+    box-shadow: 5px 5px 20px rgba(124, 124, 124, 0.582);
     border: 2px solid rgb(255, 255, 255);
     -webkit-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
