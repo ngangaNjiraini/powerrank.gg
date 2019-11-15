@@ -4,6 +4,9 @@ const router = express.Router();
 
 router.get('/all', async (_req, res) => {
     const result = await models.Ranking.findAll({
+        order: [
+            ['rankID', 'ASC'], // Sorts by COLUMN_NAME_EXAMPLE in ascending order
+        ],
         include: [
             {
                 model: models.Player
