@@ -1,4 +1,4 @@
-var playerlist = document.getElementById("players");
+let playerlist = document.getElementById("players");
 window.onload = search();
 
 function search() {
@@ -11,35 +11,35 @@ function search() {
 
 function printPlayers(data) {
     data.map(d => {
-        var column = document.createElement('div');
+        let column = document.createElement('div');
         column.className = "col-md-4";
 
-        var newCard = document.createElement('div');
+        let newCard = document.createElement('div');
         newCard.className = "card profile-card-3";
 
-        var background = document.createElement('div');
+        let background = document.createElement('div');
         background.className = "background-block";
-        var image = document.createElement('img');
+        let image = document.createElement('img');
         image.src = "images/Smash_Ball(fix).png";
         image.className = "background";
         background.appendChild(image);
 
-        var profileBlock = document.createElement('div');
+        let profileBlock = document.createElement('div');
         profileBlock.className = "profile-thumb-block";
-        var avatarImage = document.createElement('img');
+        let avatarImage = document.createElement('img');
         avatarImage.src = d.Avatar;
         avatarImage.className = "profile";
         profileBlock.appendChild(avatarImage);
 
-        var infoBlock = document.createElement('div');
+        let infoBlock = document.createElement('div');
         infoBlock.className = "card-content";
-        var player = document.createElement('h2');
+        let player = document.createElement('h2');
         player.style = "font-size: 35px;"
         player.innerText = d.playerTag
-        var game = document.createElement('p');
+        let game = document.createElement('p');
         game.style = "font-size: 18px; margin-top: 10px;"
         game.innerText = "Super Smash Bros Ultimate";
-        var viewProfile = document.createElement('a');
+        let viewProfile = document.createElement('a');
         viewProfile.addEventListener('click', () => window.location.href = './profile.html?id='+ d.playerID)
         viewProfile.style = "text-decoration-line: none; cursor: pointer;";
         viewProfile.innerText = "View profile";

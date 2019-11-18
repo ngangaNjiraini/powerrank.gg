@@ -47,12 +47,43 @@
 <body>
     <h1 class="text-center" style="margin-top: 130px; color: black;">Players</h1>
     <p>
-        <button type="button" class="btn btn-lg btn-block btn-outline-dark">Add New Player</button>
+        <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="modal"
+            data-target="#new-player">
+            Add New Player
+        </button>
         <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="collapse"
             data-target="#search-bar" aria-expanded="false" aria-controls="search-bar">
             Search Players
         </button>
     </p>
+
+    <div class="modal fade" id="new-player" tabindex="-1" role="dialog" aria-labelledby="Label"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Label">Add new Player</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="TagInput">Player Tag</label>
+                            <input type="text" class="form-control" id="TagInput"
+                                placeholder="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn ">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="input-group mb-3 collapse" id="search-bar" style="margin-top: 10px;">
         <input type="text" class="form-control" placeholder="Search Tag" aria-label="Search Tag"
             aria-describedby="button-addon2">
@@ -61,110 +92,7 @@
         </div>
     </div>
 
-    <div class="card-deck" id="players">
-        <!--<div class="row" style="padding-right: 10px;">
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="profile-image" class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>AimSuper<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="profile-image" class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>FuelDuel<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="profile-image"
-                            class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>Missmario<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style="padding-right: 10px;">
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="profile-image"
-                            class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>AsianNation<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="profile-image"
-                            class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>Trilla<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card profile-card-3">
-                    <div class="background-block">
-                        <img src="https://cdn.atomix.vg/wp-content/uploads/2018/12/LogoSuperSmashBrosUltimate-1024x436.jpg"
-                            alt="profile-sample1" class="background" />
-                    </div>
-                    <div class="profile-thumb-block">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="profile-image" class="profile" />
-                    </div>
-                    <div class="card-content">
-                        <h2>KingSSB<small>Super Smash Bros Ultimate</small></h2>
-                        <a href="profile.html" style="margin-top: 16px; text-decoration-line: none; ">View Profile</a>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-    </div>
+    <div class="card-deck" id="players"></div>
     <script src="scripts/player-list.js"></script>
 </body>
 

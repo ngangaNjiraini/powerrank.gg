@@ -1,4 +1,4 @@
-var table = document.getElementById("rank-table");
+let table = document.getElementById("rank-table");
 window.onload = search();
 
 function search() {
@@ -10,16 +10,16 @@ function search() {
 
 function printList(data) {
     data.map(d => {
-        var tableRow = document.createElement('tr');
-        var rank = document.createElement('td');
+        let tableRow = document.createElement('tr');
+        let rank = document.createElement('td');
         rank.innerText = d.rankID
-        var playerName = document.createElement('td');
+        let playerName = document.createElement('td');
         playerName.innerText = d.player.playerTag;
-        var playerWins = document.createElement('td');
+        let playerWins = document.createElement('td');
         playerWins.innerText = d.player.Wins;
-        var playerLoses = document.createElement('td');
+        let playerLoses = document.createElement('td');
         playerLoses.innerText = d.player.Loses;
-        var playerMatches = document.createElement('td');
+        let playerMatches = document.createElement('td');
         playerMatches.innerText = d.player.Matches;
 
         tableRow.appendChild(rank);
