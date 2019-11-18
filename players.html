@@ -35,9 +35,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Players</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="rankings.html">Ranking</a>
-                </li>
             </ul>
             <!-- Links -->
         </div>
@@ -47,42 +44,12 @@
 <body>
     <h1 class="text-center" style="margin-top: 130px; color: black;">Players</h1>
     <p>
-        <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="modal"
-            data-target="#new-player">
-            Add New Player
-        </button>
+        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Add New Player</button>
         <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="collapse"
             data-target="#search-bar" aria-expanded="false" aria-controls="search-bar">
             Search Players
         </button>
     </p>
-
-    <div class="modal fade" id="new-player" tabindex="-1" role="dialog" aria-labelledby="Label"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Label">Add new Player</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="TagInput">Player Tag</label>
-                            <input type="text" class="form-control" id="TagInput"
-                                placeholder="">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn ">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="input-group mb-3 collapse" id="search-bar" style="margin-top: 10px;">
         <input type="text" class="form-control" placeholder="Search Tag" aria-label="Search Tag"
