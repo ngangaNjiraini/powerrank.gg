@@ -39,8 +39,12 @@ router.get('/searchTag/:name', async (req, res) => {
 });
 
 router.post('/add', async (req, res) => {
-    await data.push(req.body);
-    res.status(201).send(data);
+    try {
+        await models.Player.create(req.body);
+        res.send();
+    } catch (exc) {
+        next(exc);
+    }
 });
 
 module.exports = router;
