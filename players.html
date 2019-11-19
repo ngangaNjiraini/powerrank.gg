@@ -43,16 +43,26 @@
 
 <body>
     <h1 class="text-center" style="margin-top: 130px; color: black;">Players</h1>
-    <p>
-        <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="modal"
-            data-target="#new-player">
-            Add New Player
-        </button>
-        <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="collapse"
-            data-target="#search-bar" aria-expanded="false" aria-controls="search-bar">
-            Search Players
-        </button>
-    </p>
+    <div class="container">
+        <p>
+            <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="modal"
+                data-target="#new-player">
+                Add New Player
+            </button>
+            <button class="btn btn-lg btn-block btn-outline-dark" type="button" data-toggle="collapse"
+                data-target="#search-bar" aria-expanded="false" aria-controls="search-bar">
+                Search Players
+            </button>
+        </p>
+
+        <div class="input-group mb-3 collapse" id="search-bar" style="margin-top: 10px;">
+            <input type="text" class="form-control" placeholder="Search Tag" aria-label="Search Tag"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-dark" type="button" id="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="new-player" tabindex="-1" role="dialog" aria-labelledby="new-player-label"
         aria-hidden="true">
@@ -75,13 +85,7 @@
         </div>
     </div>
 
-    <div class="input-group mb-3 collapse" id="search-bar" style="margin-top: 10px;">
-        <input type="text" class="form-control" placeholder="Search Tag" aria-label="Search Tag"
-            aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-dark" type="button" id="search-btn">Search</button>
-        </div>
-    </div>
+
 
     <div class="card-deck" id="players"></div>
     <script src="scripts/player-list.js"></script>
