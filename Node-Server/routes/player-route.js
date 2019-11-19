@@ -26,17 +26,6 @@ router.get('/:index', async (req, res) => {
     }
 });
 
-router.get('/searchTag/:name', async (req, res) => {
-    const [first = null] = await models.Player.findAll({
-        where: { playerTag: req.params.name },
-        include: [{ model: models.Region }]
-    });
-    if (first) {
-        res.send(first);
-    } else {
-        res.status(404).send({ message: 'Item not found for index ' + req.params.index });
-    }
-});
 
 router.post('/add', async (req, res) => {
     try {
@@ -47,18 +36,9 @@ router.post('/add', async (req, res) => {
     }
 });
 
-router.delete('/:index', (req, res) => {
-    var sql = 'DELETE FROM hotel WHERE playerID = ' + index;
-
-    conn.query(sql, (err, result,) => {
-        if (err) {
-            res.send({
-                'code': 400,
-            });
-        } else {
-            console.log('deleted ' + result.affectedRows + ' rows');
-        }
-    });
+router.delete('/:index', async (req, res) => {
+        await models.Player.destroy({ where: { playerID: req.params.index }});
+        res.send("Player ID=" + req.params.index + " Deleted!");
 });
 
 module.exports = router;
