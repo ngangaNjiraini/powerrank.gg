@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<title>PR.gg | Rankings</title>
+<title>PR.gg | New Player</title>
 
 <header>
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
@@ -43,7 +43,49 @@
 </header>
 
 <body>
-    
+    <h1 id="tag-title" class="text-center" style="margin-top: 130px; color: black;"></h1>
+    <div style="padding-left: 20%; padding-right: 20%;">
+        <form onsubmit="openModal()">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Current Win Record</label>
+                <input type="number" class="form-control form-control-lg" id="win-rec" required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Current Lose Record</label>
+                <input type="number" class="form-control form-control-lg" id="lose-rec" required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Region</label>
+                <select class="form-control form-control-lg" id="player-region">
+                    <option>North England</option>
+                    <option>South England</option>
+                    <option>Wales</option>
+                    <option>Scotland</option>
+                    <option>Northern Ireland</option>
+                    <option>Republic of Ireland</option>
+                </select>
+            </div>
+        </form>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="submitDetails()">Submit</button>
+        <button class="btn btn-dark btn-lg btn-block" onclick="window.location.href = './players.html'">Cancel</button>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Player Added</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" onclick="window.location.href='players.html'">Back to Players</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
 </body>
+<script src="scripts/add-players.js"></script>
 
 </html>

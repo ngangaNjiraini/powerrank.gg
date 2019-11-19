@@ -18,6 +18,7 @@
     text-align: center;
     height:368px;
     border:none;
+    z-index: 99;
   }
   .profile-card-3 .background-block {
       float: left;

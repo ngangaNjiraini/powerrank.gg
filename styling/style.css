@@ -82,6 +82,7 @@ a:after {
 .navbar-custom {
     background-color: black;
     text-align: center;
+    z-index: 999;
 }
 
 /* change the link color */
@@ -137,7 +138,7 @@ background-position: 50% 50%;
 .profile-sec {
     margin-top: 90px;
     background-image: url("../images/Smash_Ball\(fix\).png"); /* fallback */
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url("../images/Smash_Ball-top.png");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), url("../images/smashposter.png");
     -webkit-filter: blur(1.5px);
     filter: blur(1.5px);
     z-index:4;

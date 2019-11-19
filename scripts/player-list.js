@@ -1,4 +1,5 @@
 let playerlist = document.getElementById("players");
+
 window.onload = search();
 
 function search() {
@@ -7,6 +8,12 @@ function search() {
         //.then(json => console.log(json))
         .then(json => printPlayers(json))
         .catch(err => console.log(err));
+}
+
+function newPlayer() {
+    let newTag = document.getElementById('new-tag');
+    console.log(newTag.value);
+    window.location.href = "./add-new.html?tag=" + newTag.value;
 }
 
 function printPlayers(data) {

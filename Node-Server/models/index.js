@@ -26,10 +26,12 @@ Region.hasMany(Player, { foreignKey: 'regionID'});
 
 // Sync models and add default data
 sequelize.sync({ force: true }).then(() => {
-    Region.create({ name: 'North England'});
-    Region.create({ name: 'South England'});
-    Region.create({ name: 'Scotland'});
-    Region.create({ name: 'Wales'});
+    Region.create({ regionID: 1, name: 'North England'});
+    Region.create({ regionID: 2, name: 'South England'});
+    Region.create({ regionID: 3, name: 'Wales'});
+    Region.create({ regionID: 4, name: 'Scotland'});
+    Region.create({ regionID: 5, name: 'Northern Ireland'});
+    Region.create({ regionID: 6, name: 'Republic of Ireland'});
     
     Player.create({ 
         playerTag: 'AimSuper',

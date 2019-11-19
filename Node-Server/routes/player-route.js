@@ -47,4 +47,18 @@ router.post('/add', async (req, res) => {
     }
 });
 
+router.delete('/:index', (req, res) => {
+    var sql = 'DELETE FROM hotel WHERE playerID = ' + index;
+
+    conn.query(sql, (err, result,) => {
+        if (err) {
+            res.send({
+                'code': 400,
+            });
+        } else {
+            console.log('deleted ' + result.affectedRows + ' rows');
+        }
+    });
+});
+
 module.exports = router;
