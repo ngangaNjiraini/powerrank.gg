@@ -36,7 +36,7 @@ router.post('/add', async (req, res) => {
     }
 });
 
-router.put('/update/:index', async (req, res, next) => {
+router.put('/update/:index', async (req, res) => {
     const update = await models.Player.findOne({ where: { playerID: req.params.index } });
     //monster.HP = req.params.HP;
     await update.save(req.body);
