@@ -37,15 +37,25 @@ router.post('/add', async (req, res) => {
 });
 
 router.put('/update/:index', async (req, res) => {
-    const update = await models.Player.findOne({ where: { playerID: req.params.index } });
-    //monster.HP = req.params.HP;
-    await update.save(req.body);
-    res.send();
+    try {
+        const update = await models.Player.findOne({
+            where: { playerID: req.params.index }
+        });
+        
+        update.Wins = req.body.Wins;
+        update.Loses = req.body.Loses;
+        update.Matches = req.body.Matches;
+        update.regionID = req.body.regionID;
+        await update.save();
+        res.send("Player " + update.playerTag + " Updated.");
+    } catch (error) {
+        res.send("Something went worng. Error: " + error);
+    }
 });
 
 router.delete('/:index', async (req, res) => {
-        await models.Player.destroy({ where: { playerID: req.params.index }});
-        res.send("Player ID=" + req.params.index + " Deleted!");
+    await models.Player.destroy({ where: { playerID: req.params.index } });
+    res.send("Player ID=" + req.params.index + " Deleted!");
 });
 
 module.exports = router;

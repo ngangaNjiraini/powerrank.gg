@@ -6,24 +6,13 @@ let profile = document.getElementById('details-body')
 function searchPlayer() {
     fetch("http://localhost:8080/players/" + id)
         .then(res => res.json())
-        //.then(json => console.log(json))
         .then(json => printDetails(json))
         .catch(err => console.log(err));
 }
 
 function printDetails(data) {
-    // let playerTag = document.getElementById('tag');
-    // playerTag.innerText = data.playerTag;
-
     let newCard = document.createElement('div');
     newCard.className = "card profile-card-3";
-
-    // let background = document.createElement('div');
-    // background.className = "background-block";
-    // let image = document.createElement('img');
-    // image.src = "images/Smash_Ball(fix).png";
-    // image.className = "background";
-    // background.appendChild(image);
 
     let profileBlock = document.createElement('div');
     profileBlock.className = "profile-thumb-block";
@@ -67,6 +56,10 @@ function printDetails(data) {
     newCard.appendChild(infoBlock);
 
     profile.appendChild(newCard);
+}
+
+function updatePlayer() {
+    window.location.href = "./update.html?id=" + id;
 }
 
 function deletePlayer() {
