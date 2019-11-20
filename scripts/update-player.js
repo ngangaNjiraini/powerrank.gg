@@ -14,7 +14,7 @@ function searchPlayer() {
 
 function loadDetails(data) {
     let tagHeader = document.getElementById('tag-title');
-    tagHeader.innerText = "Update Player - " + data.playerTag;
+    tagHeader.innerText = "Edit Details - " + data.playerTag;
     wins.value = data.Wins;
     loses.value = data.Loses;
     region.value = data.region.name;
