@@ -26,7 +26,6 @@ router.get('/:index', async (req, res) => {
     }
 });
 
-
 router.post('/add', async (req, res) => {
     try {
         await models.Player.create(req.body);
@@ -54,7 +53,10 @@ router.put('/update/:index', async (req, res) => {
 });
 
 router.delete('/:index', async (req, res) => {
-    await models.Player.destroy({ where: { playerID: req.params.index } });
+    const result = await models.Player.destroy({ 
+        where: { playerID: req.params.index },
+        include: [{ model: models.Ranking }] 
+    });
     res.send("Player ID=" + req.params.index + " Deleted!");
 });
 

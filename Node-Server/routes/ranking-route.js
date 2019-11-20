@@ -16,5 +16,26 @@ router.get('/all', async (_req, res) => {
     res.send(result);
 });
 
+router.post('/add', async (req, res) => {
+    try {
+        await models.Ranking.create(req.body);
+        res.send("Player Added");
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+router.delete('/clear/all', async (req, res) => {
+    try {
+        await models.Ranking.destroy({
+            where: {},
+            truncate: true
+        });
+        res.send("All Players Deleted!");
+    } catch (err) {
+        console.log(err);
+    }
+});
+
 module.exports = router;
 

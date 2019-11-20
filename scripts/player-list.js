@@ -47,7 +47,7 @@ function printPlayers(data) {
         game.style = "font-size: 18px; margin-top: 10px;"
         game.innerText = "Super Smash Bros Ultimate";
         let viewProfile = document.createElement('a');
-        viewProfile.addEventListener('click', () => window.location.href = './profile.html?id='+ d.playerID)
+        viewProfile.addEventListener('click', () => window.location.href = './profile.html?id=' + d.playerID)
         viewProfile.style = "text-decoration-line: none; cursor: pointer;";
         viewProfile.innerText = "View profile";
         infoBlock.appendChild(player);

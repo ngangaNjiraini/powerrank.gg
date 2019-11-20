@@ -48,8 +48,8 @@ function submitDetails() {
     }
 
     const response = fetch("http://localhost:8080/players/update/"+ id, {
-        method: 'PUT', // or 'PUT'
-        body: JSON.stringify(updatedDetails), // data can be `string` or {object}!
+        method: 'PUT', 
+        body: JSON.stringify(updatedDetails), 
         headers: {
             'Content-Type': 'application/json'
         }

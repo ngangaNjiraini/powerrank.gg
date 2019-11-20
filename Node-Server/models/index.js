@@ -87,12 +87,7 @@ sequelize.sync({ force: true }).then(() => {
         Avatar: "https://randomuser.me/api/portraits/men/67.jpg"
     });
 
-    Ranking.create({playerID: 6});
-    Ranking.create({playerID: 5});
     Ranking.create({playerID: 1});
-    Ranking.create({playerID: 2});
-    Ranking.create({playerID: 4});
-    Ranking.create({playerID: 3});
 });
 
 // Export models
