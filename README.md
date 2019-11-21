@@ -5,4 +5,6 @@ To run this website:
 Restarting the server
 ------------------
 1. Ctrl+C from the command line to stop the server.
-2. run the **pr-reset.sql** file in mySQL. *Ensure that SET FOREIGN_KEY_CHECKS = 1;*
+2. run the **pr-reset.sql** file in mySQL, *Ensure that SET FOREIGN_KEY_CHECKS = 1;*.
+3. run **node server.js** again.
+
